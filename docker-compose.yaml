@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  apache:
+    image: httpd:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./front:/usr/local/apache2/htdocs
+
+  couchdb:
+    image: couchdb:latest
+    ports:
+      - "8080:5984"
+    environment:
+      COUCHDB_USER: admin
+      COUCHDB_PASSWORD: password
+
+  nodejs:
+    image: node:latest
+    working_dir: /app
+    volumes:
+      - ./back:/app
+    ports:
+      - "3000:3000"
+    command: "node index.js"

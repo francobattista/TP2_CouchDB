@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color:wheat;
+}
