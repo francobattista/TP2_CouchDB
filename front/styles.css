@@ -9,6 +9,11 @@
     display: flex;
     flex-flow: row;
     justify-content: space-around;
-    align-items: center;
     background-color:wheat;
+}
+
+
+
+.container__data{
+
 }
