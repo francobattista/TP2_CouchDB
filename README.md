@@ -62,11 +62,11 @@ Si vamos de nuevo a la lista de base de datos, se habran creado dos bases de dat
 En caso que no se haya creado, permanecer unos segundos y recargar la página, o reiniciar la arquitectura con:
 
 ```
-***docker-compose down (ó Ctrl+C si se levantaron los contenedores attacheados a la terminal)***
+docker-compose down (ó Ctrl+C si se levantaron los contenedores attacheados a la terminal)
 ```
 
 ```
-***docker-compose up***
+docker-compose up
 ```
 
 Como se creo un volumen, ahora la configuracion fue guardada y la base de datos funcionará.
@@ -80,7 +80,8 @@ Ahora podemos ingresar a http://localhost en nuestro navegador y podremos cargar
 
 Se deberá detener el daemon de apache para poder utilizar nuevamente el puerto 80. Ingresar el comando: 
 
-´´´
-***systemctl stop apache2***
-´´´
+```
+systemctl stop apache2
+```
+
 Y luego volver a levantar los contenedores como ya se especifico.
