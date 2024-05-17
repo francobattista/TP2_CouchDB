@@ -1,8 +1,8 @@
 # TP2 CouchDB + Docker Compose 📘 
 
 ## Autores
-Franco Battista 🇦🇷
-Tobias Andrade 🇧🇴
+- Franco Battista 🇦🇷
+- Tobias Andrade 🇧🇴
 
 ## Introducción
 El trabajo consta de una aplicación web que permite al usuario ingresar nombre, apellido y documento a una base de datos de couchDB, y consultar la información. Además, un servicio ingresa 
