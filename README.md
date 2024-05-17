@@ -30,11 +30,15 @@ Se crea una red interna de docker, donde los contenedores se pueden comunicar si
 
 Primero clonamos el repositorio con 
 
+```
 ***git clone urlRepositorio***
+```
 
 Nos posicionamos en la carpeta donde se clonó el repositorio y levantamos los contenedores con:
 
+```
 ***docker compose up***
+```
 
 Se levantarán automáticamente los contenedores, la red, y el volumen de CouchDB. Si es la primera vez que lo ejecuta, el volumen creado no tendra información, por lo que hay que configurar la base de datos de 
 forma manual. Para ello ingresamos a la url:
