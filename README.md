@@ -35,7 +35,7 @@ Se crea una red interna de docker, donde los contenedores se pueden comunicar si
 Primero clonamos el repositorio con 
 
 ```
-sudo git clone urlRepositorio
+sudo git clone https://github.com/francobattista/TP2_CouchDB.git
 ```
 
 Nos posicionamos en la carpeta donde se clonó el repositorio y levantamos los contenedores con:
@@ -48,7 +48,7 @@ Se levantarán automáticamente los contenedores, la red, y el volumen de CouchD
 forma manual. Para ello ingresamos a la url:
 
 ```
-http://localhost:8080/_utils"
+http://localhost:8080/_utils
 ```
 
 Luego, ingresamos las credenciales y nos dirigimos al menu desplegable a la izquierda, y clickeamos en la sección "Setup". 
