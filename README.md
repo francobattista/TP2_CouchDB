@@ -27,10 +27,10 @@ levantar el servidor de NodeJS. AVISAR QUE HAY QUE HACER UN NPM INSTALL. Se mape
 Contiene una base de datos con CouchDB. Utiliza un volumen creado por Docker que guarda la información de la carpeta "/opt/couchdb/data" dentro de este volumen de docker. Se mapea el puerto 8080 de la PC host con el puerto 
 5894 del contenedor de docker (Se utilizó el puerto 8080 ya que es posible que si se tiene instalado couch en la maquina host, ya se utilice ese puerto). Se pasan las variables de entorno: "COUCHDB_USER: admin"
 y "COUCHDB_PASSWORD: password" que serán las credenciales de la base de datos de CouchDB.
-### Red interna de docker
+### 🐳 Red interna de docker
 Se crea una red interna de docker, donde los contenedores se pueden comunicar sin necesidad de salir por fuera de la misma
 
-## Setup ⚙️
+## ⚙️ Setup
 
 Primero clonamos el repositorio con 
 
@@ -74,7 +74,7 @@ Como se creo un volumen, ahora la configuracion fue guardada y la base de datos 
 Ahora podemos ingresar a http://localhost en nuestro navegador y podremos cargar nuevos usuarios, o recargar los que ya están.
 
 
-## FAQS ❓
+## ❓ FAQS 
 
 ### Qúe ocurre si tengo instalado apache en mi maquina host y este esta corriendo?
 
