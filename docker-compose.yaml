@@ -28,7 +28,7 @@ services:
       - ./back:/app
     ports:
       - "3000:3000"
-    command: "node index.js"
+    command: sh -c "npm install && node index.js"
 
 volumes:
   couchdb_data:
