@@ -7,7 +7,7 @@ const localBD = new PouchDB('afipdb');
 
 /* Crea base de datos remota */
 
-const remoteDB = new PouchDB('http://admin:password@tp2_couch-couchdb-1:5984/afipdbremote')
+const remoteDB = new PouchDB('http://admin:password@couch-container:5984/afipdbremote')
 
 
 /* Sincorniza la base de datos local de usuario con la base de datos remota */
