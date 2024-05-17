@@ -1,5 +1,9 @@
 # TP2 CouchDB + Docker Compose 📘 
 
+## Autores
+Franco Battista 🇦🇷
+Tobias Andrade 🇧🇴
+
 ## Introducción
 El trabajo consta de una aplicación web que permite al usuario ingresar nombre, apellido y documento a una base de datos de couchDB, y consultar la información. Además, un servicio ingresa 
 datos de forma aleatoria a la base de datos, y genera una deuda también aleatoria.
@@ -45,13 +49,38 @@ forma manual. Para ello ingresamos a la url:
 
 "http://localhost:8080/_utils"
 
-Luego, ingresamos las credenciales y nos dirigimos al menu desplegable a la izquierda, y clickeamos en la sección "Setup". Clickeamos en la opción crear un "Single node" ... COMPLETAR
+Luego, ingresamos las credenciales y nos dirigimos al menu desplegable a la izquierda, y clickeamos en la sección "Setup". 
+
+Clickeamos en la opción crear un ***"Single node"*** .
+
+Luego ingresamos las credencias especificadas, en este caso: ***"admin"*** y ***"password"*** . 
+
+Dejamos el resto de la configuracion por default y clickeamos en ***"save"***
+
+Si vamos de nuevo a la lista de base de datos, se habran creado dos bases de datos propias de couchDb, y la base de datos ***"afipremote"***.
+
+En caso que no se haya creado, permanecer unos segundos y recargar la página, o reiniciar la arquitectura con:
+
+```
+***docker-compose down (ó Ctrl+C si se levantaron los contenedores attacheados a la terminal)***
+```
+
+```
+***docker-compose up***
+```
+
+Como se creo un volumen, ahora la configuracion fue guardada y la base de datos funcionará.
+
+Ahora podemos ingresar a http://localhost en nuestro navegador y podremos cargar nuevos usuarios, o recargar los que ya están.
 
 
-Una ves creado
+## FAQS ❓
 
+### Qúe ocurre si tengo instalado apache en mi maquina host y este esta corriendo?
 
+Se deberá detener el daemon de apache para poder utilizar nuevamente el puerto 80. Ingresar el comando: 
 
-
-
-
+´´´
+***systemctl stop apache2***
+´´´
+Y luego volver a levantar los contenedores como ya se especifico.
