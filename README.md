@@ -21,8 +21,8 @@ Servidor web Apache que aloja los archivos estáticos del front. Utiliza un volu
 Se mapea el puerto 80 de la PC host con el puerto 80 dentro del contenedor.
 ### 🐳 Contenedor 2: Imágen de NodeJS
 Servidor web NodeJS que aloja el backend, con dos bases de datos locales creadas con PouchDB, sincronizadas con el contenedor 3 + Servicio de ingreso de informacion random. 
-Se comunica con el contenedor 3 mediante la red interna de docker. Utiliza un volumen que vincula la carpeta "./back" con la carpeta "/app" dentro del contenedor, donde se ejecutará automáticamente el comando "node index.js" para 
-levantar el servidor de NodeJS. AVISAR QUE HAY QUE HACER UN NPM INSTALL. Se mapea el puerto 3000 de la PC host con el puerto 3000 dentro del contenedor.
+Se comunica con el contenedor 3 mediante la red interna de docker. Utiliza un volumen que vincula la carpeta "./back" con la carpeta "/app" dentro del contenedor, donde se ejecutará automáticamente el comando "npm install" para instalar los paquetes que utiliza la aplicación, y "node index.js" para 
+levantar el servidor de NodeJS. Se mapea el puerto 3000 de la PC host con el puerto 3000 dentro del contenedor.
 ### 🐳 Contenedor 3: Imágen de CouchDB
 Contiene una base de datos con CouchDB. Utiliza un volumen creado por Docker que guarda la información de la carpeta "/opt/couchdb/data" dentro de este volumen de docker. Se mapea el puerto 8080 de la PC host con el puerto 
 5894 del contenedor de docker (Se utilizó el puerto 8080 ya que es posible que si se tiene instalado couch en la maquina host, ya se utilice ese puerto). Se pasan las variables de entorno: "COUCHDB_USER: admin"
